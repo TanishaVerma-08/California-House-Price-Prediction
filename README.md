@@ -38,14 +38,14 @@ pip install -r requirements.txt
 ### 1. Clone the Repository
 
 ```sh
-git clone https://github.com/yourusername/ml-model-versioning.git
-cd ml-model-versioning
+git clone https://github.com/TanishaVerma-08/California-House-Price-Prediction
+cd California-House-Price-Prediction
 ```
 
 ### 2. Run the Script
 
 ```sh
-python model.py
+python "california house price prediction.py"
 ```
 
 ### 3. Model Output
@@ -57,32 +57,6 @@ python model.py
 ```sh
 Model Mean Squared Error: 0.2547
 Model saved as: models/model_v1.pkl
-```
-
-## Visualizing the Model
-
-To visualize the feature importances of the saved model, run the following script:
-
-```python
-import joblib
-import matplotlib.pyplot as plt
-import numpy as np
-
-# Load the latest saved model
-model_path = "models/model_v1.pkl"
-model = joblib.load(model_path)
-
-# Get feature importances
-feature_importances = model.feature_importances_
-feature_names = ['MedInc', 'HouseAge', 'AveRooms', 'AveBedrms', 'Population', 'AveOccup', 'Latitude', 'Longitude']
-
-# Plot feature importances
-plt.figure(figsize=(10,5))
-plt.barh(feature_names, feature_importances, color='skyblue')
-plt.xlabel('Feature Importance')
-plt.ylabel('Features')
-plt.title('Feature Importance in Random Forest Model')
-plt.show()
 ```
 
 ## Versioning System
